@@ -14,8 +14,8 @@ function Toggle() {
         <div className="relative">
           <input type="checkbox" onClick={onToggle} className="sr-only" />
           <div
-            className={`w-20 h-10 bg-gray-300 rounded-full ${
-              isToggled ? "bg-violet-700" : ""
+            className={`w-20 h-10 rounded-full ${
+              isToggled ? "bg-violet-700" : "bg-gray-300"
             } ease-linear duration-100`}
           ></div>
           <div
