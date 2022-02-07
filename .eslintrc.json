@@ -16,5 +16,8 @@
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "no-unused-vars": 0
+  }
 }
