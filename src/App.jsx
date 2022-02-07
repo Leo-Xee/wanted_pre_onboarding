@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 function App() {
-  useEffect(() => {}, []);
-  return <div>hello world</div>;
+  return <div className="text-3xl font-bold underline">hello world</div>;
 }
 
 export default App;
