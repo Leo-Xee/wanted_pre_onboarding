@@ -39,7 +39,7 @@ function Tag() {
     <div className="flex justify-center items-center mt-40">
       <div
         onClick={onFocus}
-        className={`w-6/12 p-2 min-h- flex items-center border-solid border-2 rounded-md flex-wrap ${
+        className={`w-6/12 p-2 flex items-center border-solid border-2 rounded-md flex-wrap ${
           isFocused ? "border-violet-700" : "border-gray-300"
         }`}
       >
