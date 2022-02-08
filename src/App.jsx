@@ -2,6 +2,7 @@ import React from "react";
 
 import Toggle from "./components/Toggle";
 import Modal from "./components/Modal";
+import Tab from "./components/Tab";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Modal>
         <div>Hello, CodeStates</div>
       </Modal>
+      <Tab />
     </div>
   );
 }
