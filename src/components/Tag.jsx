@@ -14,14 +14,12 @@ function Tag() {
     }
   };
 
-  const onFocus = (e) => {
-    e.stopPropagation();
+  const onFocus = () => {
     inputRef.current.focus();
     setIsFocused(true);
   };
 
-  const onRemove = (e, idx) => {
-    e.stopPropagation();
+  const onRemove = (_, idx) => {
     const tagsFiltered = tags.filter((_, id) => id !== idx);
     setTags([...tagsFiltered]);
     inputRef.current.blur();

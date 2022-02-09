@@ -1,18 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 
 function AutoComplete() {
   const [searchInput, setSearchInput] = useState("");
   const [searchList, setSearchList] = useState(["원티드", "코드스테이츠", "온보딩"]);
   const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef(null);
-
-  useEffect(() => {
-    const focusOut = () => isFocused && setIsFocused(false);
-    document.addEventListener("click", focusOut);
-    return () => {
-      document.removeEventListener("click", focusOut);
-    };
-  }, [isFocused]);
 
   const match = (input, list) => {
     return list.filter((val) => {
@@ -42,6 +34,10 @@ function AutoComplete() {
     setSearchInput(word);
   };
 
+  const onBlurHandler = () => {
+    isFocused && setIsFocused(false);
+  };
+
   const isValidToRecommend = searchInput && match(searchInput, searchList).length > 0;
 
   return (
@@ -57,6 +53,7 @@ function AutoComplete() {
           value={searchInput}
           onChange={onChangeHandler}
           onKeyPress={onSave}
+          onBlur={onBlurHandler}
           ref={inputRef}
           className="w-full outline-none"
         />
